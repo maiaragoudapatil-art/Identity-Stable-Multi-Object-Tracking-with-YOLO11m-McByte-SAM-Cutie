@@ -1,0 +1,31 @@
+<<<<<<< HEAD
+numpy
+opencv_python
+loguru
+scikit-image
+tqdm
+Pillow
+thop
+ninja
+tabulate
+tensorboard
+lap
+motmetrics
+filterpy
+h5py
+=======
+ultralytics
+opencv-python
+numpy
+scipy
+lap
+torch
+torchvision
+Pillow
+PyYAML
+loguru
+tqdm
+matplotlib
+segment-anything
+git+https://github.com/hkchengrex/Cutie.git
+>>>>>>> 49d35b9b6730482795c3c3c03a2e8ff146a7a36a

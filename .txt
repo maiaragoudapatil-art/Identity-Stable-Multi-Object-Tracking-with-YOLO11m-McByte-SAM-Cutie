@@ -1,0 +1,21 @@
+cd "C:\Users\VijaySegunasi\McByteProject\McByte"
+python "tools\demo_track_cpu.py" --demo video --path "C:\Users\VijaySegunasi\McByteProject\palace_original.mp4" -f "exps\example\mot\yolox_x_mix_det.py" -c "pretrained\yolox_x_sports_mix.pth.tar" --vis_type basic --start_frame_no 1 --end_frame_no 30 --save_on_error
+Get-ChildItem ".\YOLOX_outputs\yolox_x_mix_det\track_vis" -Recurse -Include *.avi,*.mp4 -File | Sort-Object LastWriteTime -Descending | Select-Object -First 3 -ExpandProperty FullName
+run --- python "tools\demo_track_cpu.py" --demo video -f "exps\example\mot\yolox_x_mix_det.py" -c "pretrained\yolox_x_sports_mix.pth.tar" --vis_type basic
+explorer "C:\Users\VijaySegunasi\McByteProject\McByte\YOLOX_outputs\yolox_x_mix_det\track_vis\2026_08_26_16_56_35"
+
+
+
+
+python "tools\demo_track_cpu.py" --demo video -f "exps\example\mot\yolox_x_mix_det.py" -c "pretrained\yolox_x_sports_mix.pth.tar" --vis_type basic
+cd "C:\Users\VijaySegunasi\McByteProject\McByte"
+.\.venv\Scripts\Activate.ps1
+$env:PYTHONPATH = (Get-Location).Path
+python -c "import yolox; print(yolox.__file__)"
+python tools\demo_track_cpu.py --demo video -f "exps\example\mot\yolox_x_mix_det.py" -c "pretrained\yolox_x_sports_mix.pth.tar" --vis_type basic
+
+pip install -U ultralytics
+python -c "from ultralytics import YOLO; m=YOLO('yolo11m.pt'); print('YOLO11m OK')"
+
+python tools\demo_track_yolo11.py
+pip install ultralytics opencv-python numpy
